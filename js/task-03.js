@@ -17,7 +17,8 @@ const list = document.querySelector('.gallery');
 
 const makeup = images.map(({ url, alt }) =>{
 const image = `<li><img src="${url} alt="${alt}" width = "400"></li>`;
-return image }).join(' ');
+return image 
+}).join(' ');
 
 list.insertAdjacentHTML('afterbegin', makeup );
 
