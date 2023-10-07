@@ -23,3 +23,22 @@
 // #validation-input.invalid {
 //   border-color: #f44336;
 // }
+
+const validationInput = document.getElementById('validation-input');
+
+
+
+function verificationQuantity(evt){
+    const inputLength = evt.currentTarget.value.length;
+    if(inputLength === Number(validationInput.dataset.length)){
+        validationInput.classList.add("valid");
+        validationInput.classList.remove("invalid")
+  } 
+  
+  else {
+        validationInput.classList.add("invalid");
+        validationInput.classList.remove("valid");
+    }
+}
+
+validationInput.addEventListener('blur', verificationQuantity);
